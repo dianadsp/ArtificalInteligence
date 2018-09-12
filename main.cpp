@@ -1,3 +1,4 @@
+#include <GL/glut.h>
 #include <iostream>
 #include "Game.h"
 #include "Structure.h"
@@ -32,6 +33,28 @@ int main()
 				cout<<window.Matrix[i][j];
 			}
 		}
+	//cosito grafico:	
+        glutInit(&argc, argv);
+        glutInitDisplayMode(GLUT_SINGLE);
+        glutInitWindowSize(600, 600);
+        glutInitWindowPosition(50, 50);
+        glutCreateWindow("Matriz");
+        //glutDisplayFunc(displayMe);
+        glClear(GL_COLOR_BUFFER_BIT);
+        glBegin(GL_LINE_LOOP);
+        
+        for (int i = 1; i < 19; ++i){
+            for (int j = 1; j < 19; ++j){
+		glVertex2f(window.Matrix[i][j], window.Matrix[i-1][j]+10);
+                glVertex2f(window.Matrix[i][j], window.Matrix[i-1][j-1]+10);   
+                glVertex2f(window.Matrix[i][j], window.Matrix[i][j+1]+10);
+            }
+	}
+        glEnd();
+        glFlush();
+        
+        glutMainLoop();
+       
         
 
         
