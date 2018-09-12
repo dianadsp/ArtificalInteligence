@@ -410,12 +410,12 @@ cout<<endl;
 
 
 /*
-	Forma de realizar el A*
+	orma de realizar el A*
 		se necesita un vector de vectores para simular la recurrencia de la pila
-		sin embargo hay q analizar las posibilidades y si son factibles para analizar
-		en caso no sea conveniene obiar el elemnto y continuar con el siguiente
+		sin embargo hay que analizar las posibilidades y si son factibles para analizar
+		en caso no sea conveniente obviar el elemento y continuar con el siguiente
 		forma de evaluar el estado:
-			f(x) = costo distacia abanzado + distancia del nuevo punto al punto final
+			f(x) = costo distacia avanzado + distancia del nuevo punto al punto final
 			costo distancia avanzado
 				linearMove
 				diagonalMove
